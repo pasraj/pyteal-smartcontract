@@ -12,7 +12,7 @@ router = Router(
 @router.method
 def create_count():
     return Seq(
-        App.globalPut(Bytes("count"), 1),
+        App.globalPut(Bytes("count"), Int(1)),
         Approve()
     )
 
